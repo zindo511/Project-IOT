@@ -1,0 +1,45 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --bg: light-dark(#f4f6f8, #0d1117);
+  --panel: light-dark(#ffffff, #161b22);
+  --text: light-dark(#17202a, #e6edf3);
+  --muted: light-dark(#667085, #8b949e);
+  --border: light-dark(#dfe3e8, #30363d);
+  --accent: #2f6feb;
+  --danger: #cf222e;
+  --ok: #1a7f37;
+  --warn: #9a6700;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); }
+main { width: min(1100px, calc(100% - 32px)); margin: 0 auto; padding: 32px 0 64px; }
+header, .section-title, .controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+h1, h2, p { margin-top: 0; }
+h1 { margin-bottom: 0; font-size: clamp(1.6rem, 4vw, 2.4rem); }
+h2 { font-size: 1rem; }
+.eyebrow { color: var(--muted); font-size: .75rem; letter-spacing: .12em; margin-bottom: 6px; }
+.status { padding: 8px 12px; border: 1px solid var(--border); border-radius: 999px; font-weight: 700; }
+.controls { justify-content: flex-start; flex-wrap: wrap; margin: 28px 0; }
+button { border: 0; border-radius: 8px; padding: 10px 16px; font: inherit; font-weight: 700; color: white; background: var(--accent); cursor: pointer; }
+button.secondary { background: var(--muted); }
+button.danger { background: var(--danger); }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 16px; }
+.panel { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.muted, .empty { color: var(--muted); }
+.device { display: grid; gap: 4px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.device:last-child { border-bottom: 0; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px 8px; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
+th { color: var(--muted); font-size: .8rem; }
+.level-ALARM { color: #f85149; font-weight: 800; }
+.level-WARNING { color: #d29922; font-weight: 800; }
+.level-INFO { color: #3fb950; font-weight: 800; }
+.ack { padding: 6px 10px; font-size: .8rem; }
+@media (max-width: 680px) {
+  main { width: min(100% - 20px, 1100px); padding-top: 20px; }
+  header { align-items: flex-start; }
+  .grid { grid-template-columns: 1fr; }
+}
+

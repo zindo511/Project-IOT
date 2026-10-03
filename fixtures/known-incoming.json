@@ -1,0 +1,8 @@
+[
+  {"zone": "A", "direction": "UNKNOWN", "identity": "NOT_EVALUATED", "face_quality": 0.0},
+  {"zone": "A", "direction": "UNKNOWN", "identity": "NOT_EVALUATED", "face_quality": 0.0},
+  {"zone": "B", "direction": "INCOMING", "identity": "KNOWN", "face_quality": 0.86, "person_id": "person-fixture"},
+  {"zone": "B", "direction": "INCOMING", "identity": "KNOWN", "face_quality": 0.88, "person_id": "person-fixture"},
+  {"zone": "B", "direction": "INCOMING", "identity": "KNOWN", "face_quality": 0.90, "person_id": "person-fixture"}
+]
+

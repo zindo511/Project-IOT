@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+runtime/
+models/*.onnx
+firmware/include/secrets.h
+.pio/
+.idea/
+.vscode/
+.DS_Store
+*.egg-info/
+

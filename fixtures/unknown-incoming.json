@@ -1,0 +1,8 @@
+[
+  {"zone": "A", "direction": "UNKNOWN", "identity": "NOT_EVALUATED", "face_quality": 0.0},
+  {"zone": "A", "direction": "UNKNOWN", "identity": "NOT_EVALUATED", "face_quality": 0.0},
+  {"zone": "B", "direction": "INCOMING", "identity": "UNKNOWN", "face_quality": 0.82},
+  {"zone": "B", "direction": "INCOMING", "identity": "UNKNOWN", "face_quality": 0.85},
+  {"zone": "B", "direction": "INCOMING", "identity": "UNKNOWN", "face_quality": 0.84}
+]
+

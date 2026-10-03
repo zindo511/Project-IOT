@@ -1,0 +1,60 @@
+project:
+  name: Smart Security MVP
+  timezone: Asia/Ho_Chi_Minh
+
+server:
+  host: 0.0.0.0
+  port: 8000
+  data_dir: runtime
+  device_token_env: SMART_SECURITY_DEVICE_TOKEN
+
+capture:
+  armed_fps: 1.0
+  active_fps: 2.0
+  preview_seconds: 30
+  max_frame_age_seconds: 3.0
+
+# Tọa độ normalized theo ảnh: [x, y], từ 0.0 đến 1.0.
+# Đây chỉ là seed; phải vẽ lại bằng ảnh camera thật tại địa điểm demo.
+zones:
+  a:
+    - [0.05, 0.35]
+    - [0.58, 0.35]
+    - [0.58, 0.95]
+    - [0.05, 0.95]
+  b:
+    - [0.60, 0.40]
+    - [0.95, 0.40]
+    - [0.95, 0.95]
+    - [0.60, 0.95]
+
+policy:
+  vote_window: 5
+  required_votes: 3
+  min_zone_observations: 2
+  min_vote_spacing_ms: 250
+  min_face_quality: 0.65
+  track_timeout_seconds: 3.0
+  device_cooldown_seconds: 10.0
+
+vision:
+  backend: stub
+  person_model: models/nanodet.onnx
+  face_detector_model: models/face_detection_yunet.onnx
+  face_recognizer_model: models/face_recognition_sface.onnx
+  min_face_size_px: 80
+  min_face_quality: 0.65
+  accept_threshold: 0.55
+  reject_threshold: 0.40
+  min_second_best_margin: 0.08
+  validated_gallery_limit: 5
+
+buzzer:
+  duration_ms: 2000
+  hard_cap_ms: 3000
+  command_ttl_ms: 5000
+  control_timeout_ms: 5000
+
+dashboard:
+  poll_interval_ms: 1500
+  event_page_size: 50
