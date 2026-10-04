@@ -19,7 +19,7 @@ Repository này cố ý bắt đầu bằng một **vertical slice có simulator
 - Simulator chạy các kịch bản `known`, `unknown`, `direct-b`, `outgoing`.
 - Firmware PlatformIO có sẵn cấu trúc và giao thức để thành viên phần cứng tiếp tục.
 
-AI thật (NanoDet/YuNet/SFace), enrollment embedding và hiệu chỉnh threshold là backlog có owner rõ trong [PLAN](docs/PLAN.md), chưa được coi là hoàn tất.
+AI thật (NanoDet/YuNet/SFace), enrollment embedding và hiệu chỉnh threshold là backlog có owner rõ trong [PLAN](docs/PLAN.md), chưa được coi là hoàn tất. Công việc và nhánh cụ thể của từng thành viên trong tuần đầu nằm tại [WEEK-01-ASSIGNMENTS](docs/WEEK-01-ASSIGNMENTS.md).
 
 ## Chạy trên Windows
 
